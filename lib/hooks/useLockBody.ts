@@ -2,7 +2,9 @@ import React from "react";
 
 const useLockBody = () => {
   React.useLayoutEffect((): (() => void) => {
-    const originalStyle: string = window.getComputedStyle(document.body).overflow;
+    const originalStyle: string = window.getComputedStyle(
+      document.body
+    ).overflow;
     const oldWidth = document.documentElement.clientWidth;
     const header = document.getElementsByTagName("header")?.[0];
     const paddingRight: string = window.getComputedStyle(header).paddingRight;
